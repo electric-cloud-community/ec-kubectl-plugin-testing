@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: rollout-bluegreen
+  name: k8s
 spec:
   replicas: 2
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: rollout-bluegreen
+      app: k8s
   template:
     metadata:
       labels:
-        app: rollout-bluegreen
+        app: k8s
     spec:
       containers:
       - name: rollouts-demo
