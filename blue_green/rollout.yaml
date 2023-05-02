@@ -18,8 +18,8 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: argoproj/rollouts-demo:blue
-        imagePullPolicy: Always
+        image: argoproj/rollouts-demo:blue:0.1tag
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
   strategy:
