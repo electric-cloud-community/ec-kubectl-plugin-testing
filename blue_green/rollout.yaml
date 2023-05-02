@@ -4,7 +4,6 @@ metadata:
   name: k8s
 spec:
   replicas: 2
-  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: k8s
@@ -25,4 +24,3 @@ spec:
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: true
       autoPromotionSeconds: 120
-      previewReplicaCount: 1
