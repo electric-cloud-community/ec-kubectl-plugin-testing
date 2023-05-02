@@ -4,7 +4,6 @@ metadata:
   name: k8s
 spec:
   replicas: 2
-  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: k8s
@@ -15,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: argoproj/rollouts-demo:blue
+        image: argoproj/rollouts-demo:green
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -23,4 +22,5 @@ spec:
     blueGreen: 
       activeService: rollout-bluegreen-active
       previewService: rollout-bluegreen-preview
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true
+      autoPromotionSeconds: 120
