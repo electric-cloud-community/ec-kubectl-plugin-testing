@@ -2,16 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: k8s
+  release: 1
 spec:
   replicas: 2
   revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: k8s
+      release: 1
   template:
     metadata:
       labels:
         app: k8s
+        release: 1
     spec:
       containers:
       - name: rollouts-demo
