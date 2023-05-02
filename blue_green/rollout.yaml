@@ -23,6 +23,6 @@ spec:
     blueGreen: 
       activeService: rollout-bluegreen-active
       previewService: rollout-bluegreen-preview
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true
       autoPromotionSeconds: 120
       previewReplicaCount: 1
