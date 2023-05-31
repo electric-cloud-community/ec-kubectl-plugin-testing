@@ -24,3 +24,4 @@ spec:
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: true
       autoPromotionSeconds: 20
+      abortScaleDownDelaySeconds: 30
